@@ -2,7 +2,9 @@
 
 import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiMail, FiGithub, FiLinkedin, FiSend, FiCheck, FiAlertCircle } from 'react-icons/fi';
+import { FiMail, FiGithub, FiLinkedin, FiSend, FiCheck, FiAlertCircle, FiPhone, FiMapPin } from 'react-icons/fi';
+import { SiGmail, SiGithub, SiLinkedin } from 'react-icons/si';
+import { MdOutlineEmail, MdOutlineLocationOn, MdOutlinePhone } from 'react-icons/md';
 import emailjs from '@emailjs/browser';
 
 export default function ContactSection() {
@@ -68,8 +70,8 @@ export default function ContactSection() {
               
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="p-3 rounded-lg bg-[var(--primary)] bg-opacity-10 text-[var(--primary)] mr-4">
-                    <FiMail size={24} />
+                  <div className="p-3 rounded-lg bg-[var(--primary)] bg-opacity-10 text-[#EA4335] mr-4">
+                    <SiGmail size={24} />
                   </div>
                   <div>
                     <h4 className="font-medium mb-1">Email</h4>
@@ -83,8 +85,8 @@ export default function ContactSection() {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="p-3 rounded-lg bg-[var(--primary)] bg-opacity-10 text-[var(--primary)] mr-4">
-                    <FiGithub size={24} />
+                  <div className="p-3 rounded-lg bg-[var(--primary)] bg-opacity-10 text-[#181717] dark:text-white mr-4">
+                    <SiGithub size={24} />
                   </div>
                   <div>
                     <h4 className="font-medium mb-1">GitHub</h4>
@@ -100,8 +102,8 @@ export default function ContactSection() {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="p-3 rounded-lg bg-[var(--primary)] bg-opacity-10 text-[var(--primary)] mr-4">
-                    <FiLinkedin size={24} />
+                  <div className="p-3 rounded-lg bg-[var(--primary)] bg-opacity-10 text-[#0A66C2] mr-4">
+                    <SiLinkedin size={24} />
                   </div>
                   <div>
                     <h4 className="font-medium mb-1">LinkedIn</h4>
@@ -124,23 +126,23 @@ export default function ContactSection() {
                     href="https://github.com/DaNnY-0324" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="p-3 rounded-full bg-[var(--card)] text-[var(--foreground)] hover:text-[var(--primary)] transition-colors"
+                    className="p-3 rounded-full bg-[var(--card)] text-[#181717] dark:text-white hover:text-[#181717] dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                   >
-                    <FiGithub size={20} />
+                    <SiGithub size={20} />
                   </a>
                   <a 
                     href="https://www.linkedin.com/in/dannyswe/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="p-3 rounded-full bg-[var(--card)] text-[var(--foreground)] hover:text-[var(--primary)] transition-colors"
+                    className="p-3 rounded-full bg-[var(--card)] text-[#0A66C2] hover:text-[#0A66C2] hover:bg-blue-50 dark:hover:bg-blue-900 dark:hover:bg-opacity-20 transition-colors"
                   >
-                    <FiLinkedin size={20} />
+                    <SiLinkedin size={20} />
                   </a>
                   <a 
                     href="mailto:dannynguyen032@gmail.com" 
-                    className="p-3 rounded-full bg-[var(--card)] text-[var(--foreground)] hover:text-[var(--primary)] transition-colors"
+                    className="p-3 rounded-full bg-[var(--card)] text-[#EA4335] hover:text-[#EA4335] hover:bg-red-50 dark:hover:bg-red-900 dark:hover:bg-opacity-20 transition-colors"
                   >
-                    <FiMail size={20} />
+                    <SiGmail size={20} />
                   </a>
                 </div>
               </div>
