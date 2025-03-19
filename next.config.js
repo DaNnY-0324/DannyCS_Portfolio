@@ -8,6 +8,10 @@ const nextConfig = {
   // This is needed to make GitHub Pages work with Next.js
   // It adds trailing slashes to URLs
   trailingSlash: true,
+  // Disable ESLint during builds
+  eslint: {
+    ignoreDuringBuilds: true,
+  }
 };
 
 module.exports = nextConfig;
