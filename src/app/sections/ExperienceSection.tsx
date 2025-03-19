@@ -10,7 +10,7 @@ const experiences = [
     title: 'Software Developer Intern',
     company: 'Govt Portal',
     location: 'Alpharetta, GA',
-    period: 'July 2024 - Present',
+    period: 'July 2024 - January 2025',
     description: [
       'Developed and secured POS and municipal management software, implementing encryption and authentication best practices to protect sensitive transactions from cyber threats',
       'Conducted security audits and log monitoring to identify unauthorized access attempts, reducing vulnerabilities.',
