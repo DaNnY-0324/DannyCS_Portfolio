@@ -2,12 +2,6 @@
 
 A modern, responsive portfolio website built with Next.js, Tailwind CSS, and Framer Motion. This portfolio showcases my projects, skills, experience, and certifications with a striking red, white, and black color scheme.
 
-## Preview
-
-![Portfolio Preview](https://github.com/user-attachments/assets/d4075412-c4b3-436c-a15a-c9f35586fc91)
-
-*Portfolio website featuring dynamic backgrounds: Matrix-style code rain in dark mode and animated circuit board in light mode.*
-
 ## Features
 
 - Modern design with a bold red, white, and black color scheme
