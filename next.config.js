@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  // GitHub Pages repository name
-  basePath: '/DannyCS_Portfolio',
-  assetPrefix: '/DannyCS_Portfolio/',
+  // GitHub Pages repository name - this will be automatically injected by the GitHub Pages action
+  basePath: '',
   // Disable ESLint during builds
   eslint: {
     ignoreDuringBuilds: true,
@@ -13,9 +12,7 @@ const nextConfig = {
   trailingSlash: true,
   images: {
     unoptimized: true,
-  },
-  // Disable React strict mode for production
-  reactStrictMode: false
+  }
 };
 
 module.exports = nextConfig;
