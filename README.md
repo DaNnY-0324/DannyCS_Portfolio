@@ -4,7 +4,7 @@ A modern, responsive portfolio website built with Next.js, Tailwind CSS, and Fra
 
 ## Preview
 
-<video src="public/video/Portfolio_Recording.mov" width="100%" autoplay loop muted></video>
+<video src="[public/video/Portfolio_Recording.mov](https://github.com/user-attachments/assets/d4075412-c4b3-436c-a15a-c9f35586fc91)" width="100%" autoplay loop muted></video>
 
 *Portfolio website featuring dynamic backgrounds: Matrix-style code rain in dark mode and animated circuit board in light mode.*
 
