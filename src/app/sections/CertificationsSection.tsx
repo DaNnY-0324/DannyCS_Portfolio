@@ -1,9 +1,12 @@
 'use client';
 
-import { useRef } from 'react';
+import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { FiAward, FiCalendar, FiExternalLink } from 'react-icons/fi';
+import { SiUdemy } from 'react-icons/si';
+import { FaCode } from 'react-icons/fa';
+import { BsMicrosoft } from 'react-icons/bs';
 
 // Certification data
 const certifications = [
@@ -45,6 +48,20 @@ const certifications = [
   }
 ];
 
+// Helper function to get icon for each certification issuer
+const getIssuerIcon = (issuer: string) => {
+  switch (issuer.toLowerCase()) {
+    case 'microsoft':
+      return <BsMicrosoft size={24} className="text-[#00a4ef]" />;
+    case 'udemy':
+      return <SiUdemy size={24} className="text-[#a435f0]" />;
+    case 'codepath':
+      return <FaCode size={24} className="text-[#1abc9c]" />;
+    default:
+      return <FiAward size={24} className="text-[var(--primary)]" />;
+  }
+};
+
 // Certification card component with flip animation
 const CertificationCard = ({ certification, index }: { certification: typeof certifications[0], index: number }) => {
   return (
@@ -60,7 +77,7 @@ const CertificationCard = ({ certification, index }: { certification: typeof cer
         <div className="flip-card-front absolute w-full h-full">
           <div className="card w-full h-full p-6 flex flex-col items-center justify-center">
             <div className="w-16 h-16 rounded-full bg-[var(--primary)] bg-opacity-10 flex items-center justify-center mb-4">
-              <FiAward size={32} className="text-[var(--primary)]" />
+              {getIssuerIcon(certification.issuer)}
             </div>
             <h3 className="text-xl font-bold text-center mb-2">{certification.title}</h3>
             <p className="text-center text-[var(--foreground)] opacity-80 mb-4">
@@ -82,6 +99,15 @@ const CertificationCard = ({ certification, index }: { certification: typeof cer
             <h3 className="text-xl font-bold mb-4">Credential Details</h3>
             
             <div className="space-y-3 flex-grow">
+              <div className="flex items-center">
+                <p className="font-medium mr-2">Issuer:</p>
+                <div className="flex items-center">
+                  <span className="mr-2">
+                    {React.cloneElement(getIssuerIcon(certification.issuer), { size: 16 })}
+                  </span>
+                  <span className="text-[var(--foreground)] opacity-80">{certification.issuer}</span>
+                </div>
+              </div>
               <div>
                 <p className="font-medium">Credential ID:</p>
                 <p className="text-[var(--foreground)] opacity-80">{certification.credentialId}</p>
