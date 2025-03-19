@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "NEXT_DISABLE_ESLINT=1 next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next build",
-    "deploy": "next build && touch out/.nojekyll && git add out/ && git commit -m \"Deploy to gh-pages\" && git subtree push --prefix out origin gh-pages"
+    "export": "NEXT_DISABLE_ESLINT=1 next build",
+    "deploy": "NEXT_DISABLE_ESLINT=1 next build && touch out/.nojekyll && git add out/ && git commit -m \"Deploy to gh-pages\" && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

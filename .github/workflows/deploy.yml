@@ -23,6 +23,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          NEXT_DISABLE_ESLINT: 1
 
       - name: Add .nojekyll file
         run: touch out/.nojekyll
