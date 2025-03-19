@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/DannyCS_Portfolio',
+  // GitHub Pages repository name
+  basePath: process.env.NODE_ENV === 'production' ? '/DannyCS_Portfolio' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/DannyCS_Portfolio/' : '',
   images: {
     unoptimized: true,
   },
