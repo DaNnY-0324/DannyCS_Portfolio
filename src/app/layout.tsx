@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   title: "Danny Andrew Nguyen | Portfolio",
   description: "Personal portfolio website of Danny Andrew Nguyen, showcasing projects, skills, and experience",
   keywords: ["Danny Andrew Nguyen", "Portfolio", "Web Developer", "Computer Science", "Georgia State University"],
+  metadataBase: new URL(process.env.NODE_ENV === 'production' ? 'https://danny-0324.github.io/DannyCS_Portfolio' : 'http://localhost:3000'),
 };
 
 export default function RootLayout({

@@ -2,7 +2,8 @@
 const nextConfig = {
   output: 'export',
   // GitHub Pages repository name
-  basePath: '',
+  basePath: '/DannyCS_Portfolio',
+  assetPrefix: '/DannyCS_Portfolio/',
   // Disable ESLint during builds
   eslint: {
     ignoreDuringBuilds: true,
