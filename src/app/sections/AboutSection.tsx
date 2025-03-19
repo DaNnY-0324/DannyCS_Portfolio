@@ -33,7 +33,7 @@ export default function AboutSection() {
               {/* Replace with your actual image */}
               <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)] opacity-20"></div>
               <div className="w-full h-full flex items-center justify-center text-xl font-medium">
-                Your Photo Here
+                Photo Pending...
               </div>
             </div>
             
