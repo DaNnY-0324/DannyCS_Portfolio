@@ -3,6 +3,10 @@
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { FiGithub, FiExternalLink, FiCode } from 'react-icons/fi';
+import { SiPython, SiReact, SiNextdotjs, SiNodedotjs, SiMongodb, SiHtml5, SiCss3, SiJavascript, SiTypescript } from 'react-icons/si';
+import { BsRobot } from 'react-icons/bs';
+import { IoFastFoodOutline } from 'react-icons/io5';
+import { MdSecurity, MdOutlineSchool, MdOutlineSupport } from 'react-icons/md';
 
 // Project data
 const projects = [
@@ -55,6 +59,45 @@ const projects = [
     image: '/images/projects/ai-chat.jpg'
   },
 ];
+
+// Helper function to get icon for each tech stack/language
+const getTagIcon = (tag: string) => {
+  switch (tag.toLowerCase()) {
+    case 'python':
+      return <SiPython className="mr-1" />;
+    case 'machine learning':
+    case 'ai':
+      return <BsRobot className="mr-1" />;
+    case 'security':
+      return <MdSecurity className="mr-1" />;
+    case 'next.js':
+      return <SiNextdotjs className="mr-1" />;
+    case 'react':
+      return <SiReact className="mr-1" />;
+    case 'node.js':
+      return <SiNodedotjs className="mr-1" />;
+    case 'mongodb':
+      return <SiMongodb className="mr-1" />;
+    case 'html':
+      return <SiHtml5 className="mr-1" />;
+    case 'css':
+      return <SiCss3 className="mr-1" />;
+    case 'javascript':
+      return <SiJavascript className="mr-1" />;
+    case 'typescript':
+      return <SiTypescript className="mr-1" />;
+    case 'education':
+      return <MdOutlineSchool className="mr-1" />;
+    case 'support':
+      return <MdOutlineSupport className="mr-1" />;
+    case 'food':
+      return <IoFastFoodOutline className="mr-1" />;
+    case 'saas':
+      return <FiCode className="mr-1" />;
+    default:
+      return <FiCode className="mr-1" />;
+  }
+};
 
 // Project card component
 const ProjectCard = ({ project, index }: { project: typeof projects[0], index: number }) => {
@@ -109,8 +152,9 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0], index: n
           {project.tags.map((tag, idx) => (
             <span 
               key={idx}
-              className="px-3 py-1 bg-[var(--primary)] bg-opacity-10 text-[var(--primary)] rounded-full text-sm border border-[var(--primary)] border-opacity-20"
+              className="px-3 py-1 bg-[var(--primary)] bg-opacity-10 dark:text-white text-black rounded-full text-sm border border-[var(--primary)] border-opacity-20 flex items-center"
             >
+              {getTagIcon(tag)}
               {tag}
             </span>
           ))}
