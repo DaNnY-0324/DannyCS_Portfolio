@@ -29,12 +29,15 @@ export default function AboutSection() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="relative h-[400px] w-full rounded-xl overflow-hidden shadow-lg border-4 border-[var(--primary)]">
+            <div className="relative w-full max-w-sm mx-auto rounded-xl overflow-hidden shadow-lg">
               {/* Replace with your actual image */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)] opacity-20"></div>
-              <div className="w-full h-full flex items-center justify-center text-xl font-medium">
-                Photo Pending...
-              </div>
+              <Image
+                src="/images/Professional_Pic.png"
+                alt="Danny Nguyen"
+                width={400}
+                height={500}
+                className="w-full h-auto border-4 border-[var(--primary)] rounded-xl"
+              />
             </div>
             
             {/* Decorative elements */}
@@ -51,23 +54,24 @@ export default function AboutSection() {
           >
             <h3 className="text-2xl font-bold mb-4">Danny Andrew Nguyen</h3>
             <p className="text-lg mb-6">
-              I'm a Computer Science student at Georgia State University with a passion for building innovative web applications and solving complex problems through code.
+              I'm a Computer Science student at Georgia State University specializing in Cybersecurity, with hands-on experience in threat detection, incident response, and security analysis.
             </p>
             <p className="mb-6">
-              My journey in technology started with a curiosity about how digital systems work, which led me to pursue a degree in Computer Science. Throughout my academic career, I've developed a strong foundation in programming principles, algorithms, and software development methodologies.
+              Currently serving as Vice President of the ISSA Georgia State University Student Chapter, I lead cybersecurity initiatives and workshops while building practical experience through roles at CodaPath, Govt Portal, and Headstarter. My expertise spans security tools like Splunk, Wireshark, and NIST frameworks.
             </p>
             <p className="mb-6">
-              I specialize in full-stack development using modern technologies like React, Next.js, Node.js, and various database systems. I'm particularly interested in creating intuitive user interfaces and optimizing application performance.
+              I specialize in developing AI-powered cybersecurity solutions, threat detection systems, and secure web applications. My projects include real-time threat analyzers and containerized security platforms using cutting-edge technologies like Docker, PostgreSQL, and machine learning frameworks.
             </p>
             <p>
-              When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and continuously expanding my knowledge in the ever-evolving tech landscape.
+              When I'm not analyzing security threats, I enjoy contributing to cybersecurity research, participating in CTF competitions, and staying current with the latest threat intelligence and security frameworks.
             </p>
 
             <div className="mt-8 grid grid-cols-2 gap-4">
               <div>
                 <h4 className="font-bold mb-2">Education</h4>
-                <p>Computer Science</p>
+                <p>Computer Science, Cyber Security</p>
                 <p>Georgia State University</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Expected December 2026</p>
               </div>
               <div>
                 <h4 className="font-bold mb-2">Location</h4>

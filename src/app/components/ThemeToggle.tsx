@@ -5,8 +5,15 @@ import { motion } from 'framer-motion';
 import { FiSun, FiMoon } from 'react-icons/fi';
 
 export default function ThemeToggle() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme, toggleTheme, mounted } = useTheme();
   const isDark = theme === 'dark';
+
+  // Prevent hydration mismatch by not rendering until mounted
+  if (!mounted) {
+    return (
+      <div className="p-2 rounded-full bg-gray-100 dark:bg-gray-900 w-9 h-9" />
+    );
+  }
 
   return (
     <motion.button

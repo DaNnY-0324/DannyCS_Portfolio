@@ -7,26 +7,47 @@ import { FiBriefcase, FiCalendar, FiMapPin } from 'react-icons/fi';
 // Experience data
 const experiences = [
   {
-    title: 'Software Developer Intern',
-    company: 'Govt Portal',
-    location: 'Alpharetta, GA',
-    period: 'July 2024 - January 2025',
+    title: 'Vice President',
+    company: 'ISSA Georgia State University Student Chapter',
+    location: 'Atlanta, Georgia',
+    period: 'June 2025 - Present',
     description: [
-      'Developed and secured POS and municipal management software, implementing encryption and authentication best practices to protect sensitive transactions from cyber threats',
-      'Conducted security audits and log monitoring to identify unauthorized access attempts, reducing vulnerabilities.',
-      'Assisted in drafting security policies and best practices for data protection and compliance based on GDPR, NIST frameworks.',
-      'Engineered targeted finance-sector email campaigns via Zoho, increasing engagement by 20%'
+      'Assist the President in planning and executing chapter initiatives, workshops, and cybersecurity awareness events, leading to increased member engagement and participation',
+      'Mentor and onboard new members by connecting them with study groups, technical resources, and professional opportunities, resulting in improved member retention and skill development',
+      'Collaborate with executive board members and strengthen partnerships with industry professionals, enhancing the chapter\'s visibility and networking opportunities'
     ]
   },
   {
-    title: 'Software Engineer Fellowship',
-    company: 'HeadStarter',
-    location: 'Remote',
-    period: 'July 2024 - Sept 2024',
+    title: 'Cybersecurity',
+    company: 'CodaPath',
+    location: 'Alpharetta, Georgia',
+    period: 'January 2025 - April 2025',
     description: [
-      'Built & scaled 5+ AI-powered applications using React.js, Next.js, and Firebase',
-      'Developed an AI-driven customer support assistant leveraging OpenAI, Pinecone & Llama 3.1, reducing query response time by 50%',
-      'Optimized backend analytics pipelines, enhancing data processing efficiency by 80%'
+      'Simulated and responded to security incidents, including phishing, DoS, DLL injection, and macro-based malware using Splunk, Wireshark, and audit pattern analysis in MITRE ATT&CK, NIST, T1055, T1003, and documenting findings',
+      'Applied NIST/SANS incident response frameworks to design and evaluate detection logic across user lifecycle activities and identity-based attack scenarios',
+      'Analyzed malicious dashboards and network traffic in Splunk, identifying attack patterns and defense anomaly-based security incidents'
+    ]
+  },
+  {
+    title: 'Software Developer Intern',
+    company: 'Govt Portal',
+    location: 'Alpharetta, Georgia',
+    period: 'July 2024 - January 2025',
+    description: [
+      'Designed and implemented a secure QR code check-in system for front-desk clerks to authenticate and log users, reducing unauthorized access risks and improving security workflows',
+      'Developed secure authentication and authorization systems using PHP, enhancing user access control for municipal and government-partnered sites',
+      'Researched and implemented security best practices for MySQL, improving database performance, load balancing, and security for 10+ government and partnered sites'
+    ]
+  },
+  {
+    title: 'Software Engineer',
+    company: 'Headstarter',
+    location: 'Remote',
+    period: 'July 2024 - September 2024',
+    description: [
+      'Collaborated in a 4-person team to design and deploy secure full-stack web apps using React.js, FastAPI, and Supabase, with a focus on user access control and reliability',
+      'Led integration of Firebase, Supabase, and Vercel authentication, and contributed full-stack features in agile sprints, including secure dashboards and user APIs',
+      'Simulated 5 malicious attack scenarios - brute force, phishing, and malware execution - to operate and investigate for artifacts and security indicators of compromise'
     ]
   }
 ];

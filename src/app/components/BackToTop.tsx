@@ -6,9 +6,15 @@ import { FiArrowUp } from 'react-icons/fi';
 
 export default function BackToTop() {
   const [isVisible, setIsVisible] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Show button when page is scrolled down
   useEffect(() => {
+    if (!mounted) return;
     const toggleVisibility = () => {
       if (window.scrollY > 500) {
         setIsVisible(true);

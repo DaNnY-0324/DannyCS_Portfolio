@@ -55,7 +55,7 @@ export default function HeroSection() {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <p className="text-xl md:text-2xl mb-8 text-[var(--foreground)] opacity-80 drop-shadow-sm">
-              Computer Science Student at Georgia State University
+              Cybersecurity Specialist & Computer Science Student
             </p>
           </motion.div>
 

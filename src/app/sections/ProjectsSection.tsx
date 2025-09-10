@@ -3,7 +3,7 @@
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { FiGithub, FiExternalLink, FiCode } from 'react-icons/fi';
-import { SiPython, SiReact, SiNextdotjs, SiNodedotjs, SiMongodb, SiHtml5, SiCss3, SiJavascript, SiTypescript } from 'react-icons/si';
+import { SiPython, SiReact, SiNextdotjs, SiNodedotjs, SiMongodb, SiHtml5, SiCss3, SiJavascript, SiTypescript, SiDocker } from 'react-icons/si';
 import { BsRobot } from 'react-icons/bs';
 import { IoFastFoodOutline } from 'react-icons/io5';
 import { MdSecurity, MdOutlineSchool, MdOutlineSupport } from 'react-icons/md';
@@ -11,49 +11,51 @@ import { MdSecurity, MdOutlineSchool, MdOutlineSupport } from 'react-icons/md';
 // Project data
 const projects = [
   {
-    title: 'Cybersecurity Threat Detector',
-    description: 'A cybersecurity tool that detects and analyzes potential threats in real-time using advanced algorithms and machine learning.',
-    tags: ['Python', 'Machine Learning', 'Security'],
-    github: 'https://github.com/DaNnY-0324/Cybersecurity-Threat-Detector',
+    title: 'AI-CyberSecurity Threat Detector',
+    description: 'Python-based personal threat detection system using FastAPI and React with PostgreSQL backend, focused on identifying anomalous network traffic in real-time with web-based dashboards.',
+    tags: ['Python', 'FastAPI', 'React', 'PostgreSQL', 'Docker', 'TypeScript'],
+    github: 'https://github.com/DaNnY-0324/AI-CyberSecurity-Threat-Detector',
     demo: null,
     image: '/images/projects/cybersecurity.jpg'
   },
   {
+    title: 'CyberGuard with Docker',
+    description: 'Kali Linux, Docker Scout, Nmap, Wireshark containerized cybersecurity platform. Built a container-based cybersecurity testing and penetration testing environment.',
+    tags: ['Kali Linux', 'Docker Container', 'Nmap', 'Wireshark'],
+    github: 'https://www.docker.com/',
+    demo: null,
+    image: '/images/projects/cyberguard.jpg',
+    isDocker: true
+  },
+  {
+    title: 'TryHackMe CTF Labs',
+    description: 'Splunk, Wireshark, CyberChef, Linux, VirtualBox security analysis and incident response lab. Simulated malicious attack scenarios and documented findings.',
+    tags: ['Splunk', 'Wireshark', 'CyberChef', 'Linux', 'VirtualBox'],
+    github: 'https://tryhackme.com/',
+    demo: null,
+    image: '/images/projects/tryhackme.jpg',
+    isTryHackMe: true
+  },
+  {
     title: 'AI Flashcard SaaS',
-    description: 'A SaaS application that uses AI to generate and manage flashcards for effective learning and studying.',
-    tags: ['Next.js', 'React', 'AI', 'SaaS'],
+    description: 'A SaaS application that uses AI to generate and manage flashcards for effective learning and studying with secure authentication.',
+    tags: ['Next.js', 'React', 'AI', 'SaaS', 'Authentication'],
     github: 'https://github.com/DaNnY-0324/AI-Flashcard-SaaS',
     demo: null,
     image: '/images/projects/flashcard.jpg'
   },
   {
     title: 'AI-RMP',
-    description: 'An AI-powered Rate My Professor alternative that provides insights and recommendations for students.',
-    tags: ['React', 'Node.js', 'AI', 'Education'],
+    description: 'An AI-powered Rate My Professor alternative with secure data handling and user authentication for student insights.',
+    tags: ['React', 'Node.js', 'AI', 'Authentication'],
     github: 'https://github.com/DaNnY-0324/AI-RMP',
     demo: null,
     image: '/images/projects/ai-rmp.jpg'
   },
   {
-    title: 'GP Valor Support Page',
-    description: 'A support page for GP Valor with documentation, FAQs, and customer service features.',
-    tags: ['HTML', 'CSS', 'JavaScript', 'Support'],
-    github: 'https://github.com/DaNnY-0324/GP-Valor-Support-Page',
-    demo: null,
-    image: '/images/projects/gp-valor.jpg'
-  },
-  {
-    title: 'Pantry Management App',
-    description: 'An application to manage pantry inventory, track expiration dates, and suggest recipes based on available ingredients.',
-    tags: ['React', 'Node.js', 'MongoDB', 'Food'],
-    github: 'https://github.com/DaNnY-0324/Pantry-Management-App',
-    demo: null,
-    image: '/images/projects/pantry.jpg'
-  },
-  {
     title: 'AI Chat Service',
-    description: 'A chat service powered by AI that provides intelligent responses and assistance to users.',
-    tags: ['React', 'Node.js', 'AI', 'Chat'],
+    description: 'A secure chat service powered by AI with encrypted communications and user authentication for intelligent assistance.',
+    tags: ['React', 'Node.js', 'AI', 'Encryption'],
     github: 'https://github.com/DaNnY-0324/AI-Chat-Service',
     demo: null,
     image: '/images/projects/ai-chat.jpg'
@@ -123,9 +125,15 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0], index: n
             target="_blank" 
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-[var(--card)] text-[var(--foreground)] hover:text-[var(--primary)] hover:scale-110 transition-all shadow-md border border-[var(--border)]"
-            aria-label="View GitHub Repository"
+            aria-label={project.isDocker ? "View Docker" : project.isTryHackMe ? "View TryHackMe" : "View GitHub Repository"}
           >
-            <FiGithub size={22} />
+            {project.isDocker ? (
+              <SiDocker size={22} />
+            ) : project.isTryHackMe ? (
+              <div className="w-[22px] h-[22px] bg-green-500 rounded flex items-center justify-center text-white font-bold text-xs">T</div>
+            ) : (
+              <FiGithub size={22} />
+            )}
           </a>
           {project.demo && (
             <a 

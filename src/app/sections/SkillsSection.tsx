@@ -43,70 +43,69 @@ const getCategoryIcon = (categoryName: string) => {
 // Skill categories with their respective skills and proficiency levels
 const skillCategories = [
   {
-    name: 'Frontend',
-    icon: <FiLayout size={24} />,
+    name: 'Security Tools',
+    icon: <FiTool size={24} />,
     skills: [
-      { name: 'React', proficiency: 90 },
-      { name: 'Next.js', proficiency: 85 },
-      { name: 'JavaScript', proficiency: 95 },
-      { name: 'TypeScript', proficiency: 80 },
-      { name: 'HTML5/CSS3', proficiency: 90 },
-      { name: 'Tailwind CSS', proficiency: 85 },
-      { name: 'Framer Motion', proficiency: 75 }
-    ]
-  },
-  {
-    name: 'Backend',
-    icon: <FiServer size={24} />,
-    skills: [
-      { name: 'Node.js', proficiency: 85 },
-      { name: 'Express', proficiency: 80 },
-      { name: 'REST APIs', proficiency: 90 },
-      { name: 'Authentication', proficiency: 85 },
-      { name: 'Authorization', proficiency: 80 }
-    ]
-  },
-  {
-    name: 'Databases',
-    icon: <FiDatabase size={24} />,
-    skills: [
-      { name: 'MongoDB', proficiency: 85 },
-      { name: 'PostgreSQL', proficiency: 75 },
-      { name: 'MySQL', proficiency: 80 },
-      { name: 'Supabase', proficiency: 70 },
-      { name: 'Firebase', proficiency: 75 }
+      { name: 'Splunk', proficiency: 90 },
+      { name: 'Wireshark', proficiency: 85 },
+      { name: 'NIST Framework', proficiency: 80 },
+      { name: 'MITRE ATT&CK', proficiency: 85 },
+      { name: 'Docker Security', proficiency: 80 },
+      { name: 'SIEM', proficiency: 85 },
+      { name: 'CyberChef', proficiency: 75 }
     ]
   },
   {
     name: 'Programming Languages',
     icon: <FiCode size={24} />,
     skills: [
-      { name: 'JavaScript', proficiency: 95 },
-      { name: 'TypeScript', proficiency: 80 },
-      { name: 'Python', proficiency: 75 },
-      { name: 'Java', proficiency: 70 },
-      { name: 'C++', proficiency: 65 },
-      { name: 'SQL', proficiency: 80 }
+      { name: 'Python', proficiency: 90 },
+      { name: 'JavaScript', proficiency: 85 },
+      { name: 'SQL', proficiency: 90 },
+      { name: 'Bash', proficiency: 80 },
+      { name: 'TypeScript', proficiency: 75 }
     ]
   },
   {
-    name: 'Tools & Methodologies',
-    icon: <FiTool size={24} />,
-    skills: [
-      { name: 'Git/GitHub', proficiency: 90 },
-      { name: 'VS Code', proficiency: 95 },
-      { name: 'Agile/Scrum', proficiency: 85 },
-      { name: 'Testing', proficiency: 75 },
-    ]
-  },
-  {
-    name: 'DevOps & Deployment',
+    name: 'Cloud & Infrastructure',
     icon: <FiCloud size={24} />,
     skills: [
-      { name: 'Vercel', proficiency: 85 },
-      { name: 'Netlify', proficiency: 80 },
-      { name: 'Docker', proficiency: 70 },
-      { name: 'Azure', proficiency: 65 },
+      { name: 'Azure', proficiency: 80 },
+      { name: 'Firebase', proficiency: 75 },
+      { name: 'Supabase', proficiency: 70 },
+      { name: 'NoSQL', proficiency: 75 },
+      { name: 'Linux', proficiency: 85 },
+      { name: 'Kali Linux', proficiency: 80 }
+    ]
+  },
+  {
+    name: 'Databases & Analytics',
+    icon: <FiDatabase size={24} />,
+    skills: [
+      { name: 'PostgreSQL', proficiency: 85 },
+      { name: 'MySQL', proficiency: 80 },
+      { name: 'MongoDB', proficiency: 75 },
+      { name: 'Data Analysis', proficiency: 80 }
+    ]
+  },
+  {
+    name: 'Web Technologies',
+    icon: <FiLayout size={24} />,
+    skills: [
+      { name: 'React', proficiency: 85 },
+      { name: 'FastAPI', proficiency: 80 },
+      { name: 'REST APIs', proficiency: 85 },
+      { name: 'Authentication', proficiency: 90 }
+    ]
+  },
+  {
+    name: 'Security Frameworks',
+    icon: <FiServer size={24} />,
+    skills: [
+      { name: 'Incident Response', proficiency: 85 },
+      { name: 'Threat Detection', proficiency: 90 },
+      { name: 'Vulnerability Assessment', proficiency: 80 },
+      { name: 'Security Analysis', proficiency: 85 }
     ]
   },
 ];

@@ -6,8 +6,14 @@ import { motion, useScroll } from 'framer-motion';
 export default function ScrollProgressBar() {
   const { scrollYProgress } = useScroll();
   const [isVisible, setIsVisible] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
     const handleScroll = () => {
       // Show the progress bar after scrolling down a bit
       if (window.scrollY > 100) {
