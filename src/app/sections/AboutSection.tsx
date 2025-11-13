@@ -30,9 +30,8 @@ export default function AboutSection() {
             className="relative"
           >
             <div className="relative w-full max-w-sm mx-auto rounded-xl overflow-hidden shadow-lg">
-              {/* Replace with your actual image */}
               <Image
-                src="https://danny-0324.github.io/DannyCS_Portfolio/images/Professional_Pic.png"
+                src="/public/images/Professional.Pic.png"
                 alt="Danny Nguyen"
                 width={400}
                 height={500}
