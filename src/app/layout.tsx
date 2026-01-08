@@ -33,6 +33,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${poppins.variable} ${robotoMono.variable} font-sans antialiased`}
+        suppressHydrationWarning
       >
         <ThemeProvider>
           <ScrollProgressBar />
