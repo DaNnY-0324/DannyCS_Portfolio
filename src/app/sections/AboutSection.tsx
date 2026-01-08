@@ -31,7 +31,7 @@ export default function AboutSection() {
           >
             <div className="relative w-full max-w-sm mx-auto rounded-xl overflow-hidden shadow-lg">
               <Image
-                src="/public/images/Professional_Pic.png"
+                src="/images/Professional_Pic.png"
                 alt="Danny Nguyen"
                 width={400}
                 height={500}
